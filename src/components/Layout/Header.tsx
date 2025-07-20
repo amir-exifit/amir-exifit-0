@@ -28,10 +28,15 @@ const Header: React.FC = () => {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.2 }}
-      className="fixed top-4 left-4 right-4 z-50 max-w-7xl mx-auto mb-4"
+      className="fixed top-4 z-50 mb-4"
+      style={{
+        left: '30px',
+        right: '30px',
+        maxWidth: 'calc(100vw - 60px)'
+      }}
     >
-      <div className="blur-sheet rounded-2xl shadow-xl">
-        <div className="px-4 lg:px-6">
+      <div className="blur-sheet rounded-2xl shadow-xl max-w-7xl mx-auto">
+        <div className="px-3 sm:px-4 lg:px-6">
           <div className="flex justify-between items-center h-14 lg:h-16">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-2 space-x-reverse flex-shrink-0 logo-link">

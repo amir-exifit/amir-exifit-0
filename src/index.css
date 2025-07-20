@@ -83,11 +83,25 @@ a:focus, button:focus, .logo-link:focus {
   html {
     font-size: 14px;
   }
+  
+  /* Adjust header spacing for mobile */
+  header[style*="left: 30px"] {
+    left: 15px !important;
+    right: 15px !important;
+    max-width: calc(100vw - 30px) !important;
+  }
 }
 
 @media (min-width: 641px) and (max-width: 1024px) {
   html {
     font-size: 15px;
+  }
+  
+  /* Adjust header spacing for tablet */
+  header[style*="left: 30px"] {
+    left: 20px !important;
+    right: 20px !important;
+    max-width: calc(100vw - 40px) !important;
   }
 }
 
