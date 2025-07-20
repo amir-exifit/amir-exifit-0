@@ -89,9 +89,9 @@ const Header: React.FC = () => {
                 animate={{ opacity: 1, height: 'auto' }}
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.2 }}
-                className="md:hidden bg-white/20 backdrop-blur-xl rounded-2xl mt-2 overflow-hidden shadow-2xl"
+                className="md:hidden bg-white/15 backdrop-blur-md rounded-2xl mt-3 overflow-hidden shadow-2xl border border-white/20"
               >
-                <div className="py-2">
+                <div className="py-3">
                   {navItems.map((item, index) => (
                     <motion.div
                       key={item.path}
@@ -104,8 +104,8 @@ const Header: React.FC = () => {
                         onClick={() => setIsMenuOpen(false)}
                         className={`block px-4 py-3 text-sm font-black transition-colors duration-200 focus:outline-none ${
                           location.pathname === item.path
-                            ? 'text-purple-600 bg-purple-50/50'
-                            : 'text-gray-800 hover:text-purple-600 hover:bg-purple-50/30'
+                            ? 'text-purple-600 bg-white/20'
+                            : 'text-gray-800 hover:text-purple-600 hover:bg-white/10'
                         }`}
                       >
                         {item.label}
